@@ -1,0 +1,137 @@
+#############################
+#######  CONFIGURACIÓN ######
+#############################
+disabled-worlds:
+  - 'example_world'
+
+prefix: '&c&lC&d&lH&b&lA&a&lT &6&lG&e&lA&a&lM&c&lE&b&lS'
+
+# Solo los jugadores con 'chatgames.start.*' podrán iniciar aunque esto esté en false
+allow_starting_from_disabled: true
+
+# La cantidad mínima de jugadores que deben estar en línea para que el evento de chat inicie
+min_players_online: 1
+
+# El tiempo que tardará en elegirse nuevamente un juego aleatorio
+time_minutes: 25
+
+# El tiempo que tendrán los usuarios para adivinar, resolver, escribir, etc., en segundos
+timeToGuess_seconds: 20
+
+# Desactivar esto hará que no sea necesario el permiso chatgames.play para mostrar los juegos
+use-permission-toplay: false
+
+# ¡Sonido que se enviará a los jugadores cuando inicie un evento de chat!
+playSound: true
+sound: 'ENTITY_PLAYER_LEVELUP'
+
+
+#############################
+######    CHATGAMES    ######
+#############################
+unscramble:
+    enable: true
+    
+    case-sensitive: true
+    #__Deja los siguientes 2 vacíos para desactivarlos__
+    titleMessage: '&b%word%'
+    subtitleMessage: '&aOrdena la palabra'
+
+unreverse:
+    enable: true
+    
+    case-sensitive: true
+    # Deja los siguientes 2 vacíos para desactivarlos
+    titleMessage: '&b%word%'
+    subtitleMessage: '&aEscribe al derecho'
+
+reaction:
+    enable: true
+    
+    case-sensitive: true
+    #__Deja los siguientes 2 vacíos para desactivarlos__
+    titleMessage: '&b%word%'
+    subtitleMessage: '&aEscribe'
+    
+fillout:
+    enable: true
+    
+    case-sensitive: true
+    #__Deja los siguientes 2 vacíos para desactivarlos__
+    titleMessage: '&b%word%'
+    subtitleMessage: '&aCompleta'
+
+# En este juego, se creará una cadena de la longitud especificada con caracteres aleatorios
+random:
+    enable: true
+    
+    case-sensitive: true
+    # La longitud de la cadena que se generará aleatoriamente para este juego
+    length: 6
+    # Tipos disponibles: ALPHA (letras), ALPHANUMERIC (letras y números), NUMERIC (números), SYMBOLIC (símbolos)
+    character_type: ALPHANUMERIC
+    
+    #__Deja los siguientes 2 vacíos para desactivarlos__
+    titleMessage: '&b%random%'
+    subtitleMessage: '&aEscribe'
+
+math:
+    enable: true
+    
+    # No cambies esto
+    case-sensitive: false
+    # Rangos de números aleatorios según la dificultad:
+    # 1 - (1-9)
+    # 2 - (1-99)
+    # 3 - (1-999)
+    # 4 - (1-9999)
+    # 5 - (1-99999)
+    difficulty: 2
+    # Operadores a usar, los cuatro listados son los disponibles. Puedes quitar los que no quieras usar. Siempre deja al menos 1
+    operators:
+      - '+'
+      - '-'
+      - '*'
+      - '/'
+      
+    #__Deja los siguientes 2 vacíos para desactivarlos__
+    titleMessage: '&b%equation%'
+    subtitleMessage: '&aResuelve'
+    
+variable:
+    enable: true
+    
+    # No cambies esto
+    case-sensitive: false
+    
+    #__Deja los siguientes 2 vacíos para desactivarlos__
+    titleMessage: '&bRESUELVE'
+    subtitleMessage: '&aPara &7`&b%symbol%&7`'
+    
+    # El rango del número resultado aleatorio
+    result-min: 20
+    result-max: 100
+    
+    toGet: '✗'
+    # Aquí tienes otros símbolos que puedes usar para agregar: ✪❃✿✠❂♫♪❦♡♤♢✦☾☽✹
+    data:
+      - '✯;10'
+      - '♛;15'
+      - '❅;20'
+      - '♫;25'
+          
+trivia:
+    enable: true
+    
+    case-sensitive: false
+    #__Deja los siguientes 2 vacíos para desactivarlos__
+    titleMessage: '&bTRIVIA'
+    subtitleMessage: '&a¡Revisa el chat!'
+    
+    data:
+      1:
+        question: '¿Cuántos lados tiene un dado? (número)'
+        answer: '6'
+      2:
+        question: '¿En qué planeta vivimos?'
+        answer: 'Tierra'

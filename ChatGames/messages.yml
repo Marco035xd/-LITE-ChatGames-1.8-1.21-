@@ -1,0 +1,219 @@
+unknown_command: '&8[%prefix%&8] &cComando desconocido.'
+config_reloaded: '&8[%prefix%&8] &fLos archivos de configuración han sido recargados!'
+not_enough_permissions: '&8[%prefix%&8] &cNo tienes suficientes permisos para ejecutar este comando!'
+player_only_command: '&8[%prefix%&8] &cEste comando solo puede ser ejecutado por jugadores!'
+
+cannot_start_from_disabled: '&8[%prefix%&8] &cNo puedes iniciar un juego de chat desde un mundo deshabilitado!'
+toggle_game: '&8[%prefix%&8] &fHas cambiado a &a%state% &flos eventos de chat!'
+game_started: '&8[%prefix%&8] &aHas iniciado un evento de chat %game% en tu chat!'
+
+#Puedes usar <center> si deseas hacerlo en los siguientes 4 mensajes.
+top:
+  header: '&b&m---------&e&lTOP CHAT&b&m---------'
+  format: '&c%spot%. &f%player% &8| &e&l%points% &7puntos'
+  player-stat-format: '&7Has conseguido &e&l%player_points% &7victorias'
+  footer: '&b&m---------------------------'
+  
+  no_data_message: '&8[%prefix%&8] &cTodavía no hay datos! Gana un juego de chat y consigue puntos!'
+
+help_command:
+  - '&7&m-------------------------------------------------'
+  - '&e&l-ChatGames-'
+  - '&6'
+  - '&6&lCOMANDOS:'
+  - '&6'
+  - '&a/chatgames (tipo) &f- &3Inicia instantáneamente el tipo de evento especificado.'
+  - '&a/chatgames top &f- &3Muestra los 10 mejores jugadores con más puntos.'
+  - '&a/chatgames toggle &f- &3Activa o desactiva los juegos.'
+  - '&a/chatgames reload &f- &3Recarga el archivo config.yml.'
+  - '&6'
+  - '&2&lTIPOS DE JUEGO:'
+  - '&5unscramble, unreverse, reaction, random,  math, trivia'
+  - '&7&m-------------------------------------------------'
+  
+#Usa <center> en los mensajes de LISTA para centrar los mensajes; las líneas con esto serán centradas!
+
+  
+#############################
+##  MENSAJES DE CHATGAME   ##
+#############################
+
+#PUEDES USAR "%display_name%" COMO REEMPLAZO DE %player% EN correct_message PARA TODOS LOS JUEGOS.
+unscramble:
+    gameStartAnnouncement: 
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fTienes &e%timeToGuess% segundos &fpara &dordenar&f: `&b%word%&f`'
+      - ''
+    correct_message: 
+      - ''
+      - '<center>&r✓ ✯ %prefix% &r✯ ✓'
+      - ''
+      - '<center>&a%player% &7ha ordenado correctamente `&e%correct_answer%&7` (&c%time%s&7) y recibió un premio!'
+      - ''
+    time_expired_message:
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fHan pasado &e%timeToGuess%s&c! &fEl juego de ordenar ha terminado!'
+      - '<center>La respuesta correcta era &e%correct_answer%&f!'
+      - ''
+
+unreverse:
+    gameStartAnnouncement: 
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fTienes &e%timeToGuess% segundos &fpara &dponer en orden&f la palabra: `&b%word%&f`'
+      - ''
+    correct_message: 
+      - ''
+      - '<center>&r✓ ✯ %prefix% &r✯ ✓'
+      - ''
+      - '<center>&a%player% &7fue el más rápido en poner en orden `&e%correct_answer%&7` (&c%time%s&7) y recibió un premio!'
+      - ''
+    time_expired_message:
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fHan pasado &e%timeToGuess%s&c! &fEl juego de poner en orden ha terminado!'
+      - '<center>La respuesta correcta era &e%correct_answer%&f!'
+      - ''
+
+reaction:
+    gameStartAnnouncement: 
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fTienes &e%timeToGuess% segundos &fpara &describir&f la palabra: `&b%word%&f`'
+      - ''
+    correct_message: 
+      - ''
+      - '<center>&r✓ ✯ %prefix% &r✯ ✓'
+      - ''
+      - '<center>&a%player% &7fue el más rápido en escribir `&e%correct_answer%&7` (&c%time%s&7) y recibió un premio!'
+      - ''
+    time_expired_message:
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fHan pasado &e%timeToGuess%s&c! &fEl juego de reacción ha terminado!'
+      - '<center>La respuesta correcta era &e%correct_answer%&f!'
+      - ''
+      
+fillout:
+    gameStartAnnouncement: 
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fTienes &e%timeToGuess% segundos &fpara &dcompletar&f la palabra: `&b%word%&f`'
+      - ''
+    correct_message: 
+      - ''
+      - '<center>&r✓ ✯ %prefix% &r✯ ✓'
+      - ''
+      - '<center>&a%player% &7fue el más rápido en completar `&e%correct_answer%&7` (&c%time%s&7) y recibió un premio!'
+      - ''
+    time_expired_message:
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fHan pasado &e%timeToGuess%s&c! &fEl juego de completar ha terminado!'
+      - '<center>La respuesta correcta era &e%correct_answer%&f!'
+      - ''
+
+#En este juego, se creará una cadena de la longitud especificada con caracteres aleatorios
+random:
+    gameStartAnnouncement: 
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fTienes &e%timeToGuess% segundos &fpara &describir&f: `&b%random%&f`'
+      - ''
+    correct_message: 
+      - ''
+      - '<center>&r✓ ✯ %prefix% &r✯ ✓'
+      - ''
+      - '<center>&a%player% &7fue el más rápido en escribir `&e%correct_answer%&7` (&c%time%s&7) y recibió un premio!'
+      - ''
+    time_expired_message:
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fHan pasado &e%timeToGuess%s&c! &fEl juego aleatorio ha terminado!'
+      - '<center>La respuesta correcta era &e%correct_answer%&f!'
+      - ''
+
+math:
+    gameStartAnnouncement: 
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fTienes &e%timeToGuess% segundos &fpara &dresolver&f: `&b%equation%&f`'
+      - ''
+    #Aquí también puedes usar '%equation%' en el mensaje si deseas hacerlo
+    correct_message: 
+      - ''
+      - '<center>&r✓ ✯ %prefix% &r✯ ✓'
+      - ''
+      - '<center>&a%player% &7fue el más rápido en obtener `&e%correct_answer%&7` (&c%time%s&7) y recibió un premio!'
+      - ''
+    time_expired_message:
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fHan pasado &e%timeToGuess%s&c! &fEl juego de matemáticas ha terminado!'
+      - '<center>La respuesta correcta era &e%correct_answer%&f!'
+      - ''
+      
+variable:
+    #Este es el formato en el que aparecerán; puedes cambiar la cantidad de veces que %symbol% se repite en 'line1and2-format', pero todas las variables en la línea 3 deben quedar como se muestran.
+    line1and2-format: '&c%symbol%&f + &c%symbol%&f + &c%symbol%&f = &e'
+    line3-format: '&c%symbol_1%&f + &c%symbol_2%&f + &b%toGet% &f= &e%result%'
+    gameStartAnnouncement: 
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fTienes &e%timeToGuess% segundos &fpara &dresolver el valor de&f: `&b%symbol%&f`'
+      - ''
+      - '<center>%line_1%'
+      - '<center>%line_2%'
+      - '<center>%line_3%'
+      - ''
+    #Aquí también puedes usar '%equation%' en el mensaje si deseas hacerlo
+    correct_message: 
+      - ''
+      - '<center>&r✓ ✯ %prefix% &r✯ ✓'
+      - ''
+      - '<center>&a%player% &7fue el más rápido en obtener `&e%correct_answer%&7` (&c%time%s&7) y recibió un premio!'
+      - ''
+    time_expired_message:
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fHan pasado &e%timeToGuess%s&c! &fEl juego de variable ha terminado!'
+      - '<center>La respuesta correcta era &e%correct_answer%&f!'
+      - ''
+          
+trivia:
+    gameStartAnnouncement: 
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fTienes &e%timeToGuess% segundos &fpara &dresponder&f:'
+      - '<center>&f`&b%question%&f`'
+      - ''
+    correct_message: 
+      - ''
+      - '<center>&r✓ ✯ %prefix% &r✯ ✓'
+      - ''
+      - '<center>&a%player% &7fue el primero en responder `&e%correct_answer%&7` (&c%time%s&7) y recibió un premio!'
+      - ''
+    time_expired_message:
+      - ''
+      - '<center>&r✓ ✯ %prefix%&r ✯ ✓'
+      - ''
+      - '<center>&fHan pasado &e%timeToGuess%s&c! &fEl juego de trivia ha terminado!'
+      - '<center>La respuesta correcta era &e%correct_answer%&f!'
+      - ''

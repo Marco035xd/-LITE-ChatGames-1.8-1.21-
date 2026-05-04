@@ -1,0 +1,91 @@
+#ACCIONES POSIBLES:
+#
+#[playercmd] - Ejecuta el comando como el ganador
+#[consolecmd] - Ejecuta el comando desde la consola
+#[playermsg] - Envía un mensaje al ganador
+#[broadcast] - Transmite un mensaje a todos los jugadores en los mundos habilitados
+#
+#AGREGA OPORTUNIDADES A LAS RECOMPENSAS HACIENDO LO SIGUIENTE:
+#
+#EJEMPLO:
+#  - '10.0%~ [consolecmd] give %player% iron_block 5'
+#SOLO FUNCIONARÁ SI EL FORMATO ES EL MISMO QUE EL EJEMPLO, CON EL <chance>% AL PRINCIPIO SEGUIDO DE UN ~ Y UN ESPACIO. SIEMPRE PRIMERO EN EL COMANDO
+#
+#LOS COMANDOS SIN NINGÚN % SERÁN RECOMPENSAS DADAS AL 100%.
+
+#VERIFICACIÓN DE PERMISOS:
+#
+#PONLO AL FINAL DE LA LÍNEA DE COMANDO.
+#Ejemplo:
+#  - '[consolecmd] give %player% iron_block 5 has:test.permission'
+
+#El 1 es para el PRIMER ganador, SI AÑADES MÁS GANADORES EN EL config.yml Y QUIERES RECOMPENSAS DIFERENTES, AÑADE SU LUGAR (2:, etc)
+unscramble:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] crate giveKey key_1776447181461 %player% 5'
+            - '[consolecmd] give %player% diamond 32'
+            - '[consolecmd] give %player% emerald 32'
+        reward_2:
+          chance: 50
+          data:
+            - '[consolecmd] give %player% diamond_block 5'
+            - '[consolecmd] give %player% iron_block 32'
+
+unreverse:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% iron_block 64'
+            - '[consolecmd] give %player% diamond_block 3'
+
+reaction:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% iron_block 64'
+            - '[consolecmd] give %player% golden_apple 16'
+          
+clickable:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% diamond_block 5'
+            - '[consolecmd] give %player% emerald_block 5'
+
+fillout:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% gold_block 32'
+          
+hoverable:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% diamond 64'
+
+random:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% diamond_block 8'
+
+variable:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% gold_block 32'
+
+math:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% emerald_block 64'
+          
+trivia:
+    rewards:
+        reward_1:
+          data:
+            - '[consolecmd] give %player% iron_block 64'
